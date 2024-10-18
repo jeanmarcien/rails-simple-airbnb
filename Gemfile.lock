@@ -209,7 +209,7 @@ GEM
     reline (0.5.10)
       io-console (~> 0.5)
     rexml (3.3.8)
-    rspec-core (3.13.1)
+    rspec-core (3.13.2)
       rspec-support (~> 3.13.0)
     rspec-expectations (3.13.3)
       diff-lcs (>= 1.2.0, < 2.0)
@@ -233,6 +233,9 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    simple_form (5.3.1)
+      actionpack (>= 5.2)
+      activemodel (>= 5.2)
     sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -290,8 +293,9 @@ DEPENDENCIES
   rails-controller-testing
   rspec-rails
   selenium-webdriver
+  simple_form
   sprockets-rails
-  sqlite3 (>= 1.4)
+  sqlite3 (~> 1.5)
   stimulus-rails
   turbo-rails
   tzinfo-data

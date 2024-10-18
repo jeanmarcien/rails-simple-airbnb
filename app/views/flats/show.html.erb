@@ -1,0 +1,26 @@
+<div class="d-flex justify-content-between align-items-center p-3 mb-4 bg-light">
+    <h3 class="mb-0">Simple Airbnb</h3>
+</div>
+
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">
+          <h2><%= @flat.name %></h2>
+        </div>
+        <div class="card-body">
+          <p><strong>Address:</strong> <%= @flat.address %></p>
+          <p><strong>Description:</strong> <%= @flat.description %></p>
+          <img src="<%= @flat.image_url %>" class="card-img-top" alt="Flat image">
+          <p><strong>Price per Night:</strong> $<%= @flat.price_per_night %></p>
+          <p><strong>Number of Guests:</strong> <%= @flat.number_of_guests %></p>
+        </div>
+        <div class="card-footer text-right">
+          <%= link_to 'Edit', edit_flat_path(@flat), class: "btn btn-primary" %>
+          <%= link_to 'Back to Flats', flats_path, class: "btn btn-secondary" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
