@@ -1,0 +1,39 @@
+<div class="d-flex justify-content-between align-items-center p-3 mb-4 bg-light">
+    <h3 class="mb-0">Simple Airbnb</h3>
+    <a href="#" class="btn btn-success">Add flat</a>
+</div>
+
+<div class="container my-5">
+  <div>
+    <h1 class="mb-4">All our Flats (<%= @flats.count %>)</h1>
+  </div>
+
+  <div class="row">
+    <% @flats.each do |flat| %>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="https://source.unsplash.com/1600x900/?apartment,flat" class="card-img-top" alt="Flat image">
+          <div class="card-body">
+            <h5 class="card-title"><%= flat.name %></h5>
+            <h6 class="card-subtitle mb-2 text-muted"><%= flat.address %></h6>
+            <!-- >"<p class="card-text"><%= flat.description.truncate(100) %></p>" -->
+            <!-- Price and Guests on the same line with Font Awesome icons -->
+            <div class="d-flex justify-content-between">
+              <p class="card-text">
+                <i class="fas fa-dollar-sign"></i> <%= flat.price_per_night %>
+              </p>
+              <p class="card-text">
+                <i class="fas fa-user"></i> <%= flat.number_of_guests %>
+              </p>
+            </div>
+            <div class="d-flex justify-content-between">
+              <a href="#" class="btn btn-link" style="text-decoration: none;">More info</a>
+              <a href="#" class="btn btn-link" style="text-decoration: none;">Edit</a>
+              <a href="#" class="btn btn-link" style="text-decoration: none;">Remove</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
